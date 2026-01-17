@@ -1,0 +1,90 @@
+.services {
+  background: linear-gradient(135deg, #F1F8E9 0%, #E8F5E9 100%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.service-card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--light-blue), var(--blue-accent));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: var(--white);
+}
+
+.service-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  color: var(--primary-green);
+  margin-bottom: 15px;
+}
+
+.service-description {
+  color: var(--light-text);
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.service-features {
+  list-style: none;
+  text-align: left;
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+.service-features li {
+  margin-bottom: 8px;
+  color: var(--dark-text);
+  display: flex;
+  align-items: center;
+}
+
+.check-icon {
+  color: var(--secondary-green);
+  font-weight: bold;
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.service-button {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .service-features {
+    text-align: center;
+  }
+  
+  .service-features li {
+    justify-content: center;
+  }
+}

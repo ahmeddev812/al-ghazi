@@ -1,0 +1,112 @@
+.why-choose-us {
+  background: var(--white);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.feature-card {
+  text-align: center;
+  padding: 30px;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #F1F8E9 0%, #E8F5E9 100%);
+  transition: var(--transition);
+}
+
+.feature-card:hover {
+  background: linear-gradient(135deg, var(--light-blue), #B3E5FC);
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  width: 70px;
+  height: 70px;
+  background: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 1.8rem;
+  color: var(--primary-green);
+  box-shadow: var(--shadow);
+}
+
+.feature-card h3 {
+  color: var(--primary-green);
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.feature-card p {
+  color: var(--light-text);
+  font-size: 0.95rem;
+}
+
+.certifications {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.certifications h3 {
+  font-size: 2rem;
+  color: var(--primary-green);
+  margin-bottom: 30px;
+}
+
+.cert-logos {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.cert-logo {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, var(--light-green), var(--primary-green));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-weight: 600;
+  font-size: 1.1rem;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.cert-logo:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+@media (max-width: 768px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .cert-logos {
+    gap: 20px;
+  }
+  
+  .cert-logo {
+    width: 80px;
+    height: 80px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .cert-logo {
+    width: 70px;
+    height: 70px;
+  }
+}

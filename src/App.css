@@ -1,0 +1,178 @@
+/* Font imports */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* CSS Variables for Health/Nutrition Theme */
+:root {
+  --primary-green: #2E7D32;
+  --secondary-green: #4CAF50;
+  --light-green: #8BC34A;
+  --blue-accent: #2196F3;
+  --light-blue: #E3F2FD;
+  --cream: #F9FBE7;
+  --dark-text: #1B5E20;
+  --light-text: #388E3C;
+  --white: #FFFFFF;
+  --shadow: 0 4px 12px rgba(46, 125, 50, 0.1);
+  --transition: all 0.3s ease;
+}
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: var(--dark-text);
+  background-color: var(--cream);
+  overflow-x: hidden;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F9FBE7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #4CAF50, #2E7D32);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #2E7D32, #4CAF50);
+}
+
+/* Common Section Styles */
+section {
+  padding: 100px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.8rem;
+  color: var(--primary-green);
+  margin-bottom: 1rem;
+  text-align: center;
+  position: relative;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: var(--light-text);
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Button Styles */
+.cta-button {
+  display: inline-block;
+  padding: 14px 36px;
+  background: linear-gradient(135deg, var(--primary-green), var(--light-green));
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: var(--transition);
+  border: none;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(46, 125, 50, 0.2);
+  background: linear-gradient(135deg, var(--light-green), var(--primary-green));
+}
+
+.secondary-button {
+  background: transparent;
+  color: var(--primary-green);
+  border: 2px solid var(--primary-green);
+}
+
+.secondary-button:hover {
+  background: var(--primary-green);
+  color: var(--white);
+}
+
+/* Card Styles */
+.card {
+  background: var(--white);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(46, 125, 50, 0.15);
+}
+
+.card-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, var(--light-blue), var(--blue-accent));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: var(--white);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  section {
+    padding: 80px 20px;
+  }
+  
+  .section-title {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 60px 20px;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1.1rem;
+  }
+}

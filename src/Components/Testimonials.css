@@ -1,0 +1,151 @@
+.testimonials {
+  background: linear-gradient(135deg, #E8F5E9 0%, #F1F8E9 100%);
+}
+
+.testimonials-slider {
+  position: relative;
+  max-width: 800px;
+  margin: 50px auto 0;
+  overflow: hidden;
+}
+
+.slider-container {
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.slides-wrapper {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.testimonial-slide {
+  min-width: 100%;
+  padding: 0 20px;
+}
+
+.testimonial-card {
+  text-align: center;
+  position: relative;
+  padding: 40px;
+}
+
+.quote-icon {
+  font-size: 2rem;
+  color: var(--light-green);
+  margin-bottom: 20px;
+}
+
+.testimonial-text {
+  font-size: 1.2rem;
+  color: var(--dark-text);
+  line-height: 1.8;
+  font-style: italic;
+  margin-bottom: 25px;
+}
+
+.rating {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 25px;
+}
+
+.star {
+  color: #FFD700;
+  font-size: 1.2rem;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.author-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  border: 3px solid var(--light-green);
+}
+
+.author-info h4 {
+  color: var(--primary-green);
+  margin-bottom: 5px;
+}
+
+.author-info p {
+  color: var(--light-text);
+  font-size: 0.9rem;
+}
+
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background: var(--white);
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  color: var(--primary-green);
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  z-index: 10;
+}
+
+.slider-arrow:hover {
+  background: var(--primary-green);
+  color: var(--white);
+}
+
+.slider-arrow.prev {
+  left: 10px;
+}
+
+.slider-arrow.next {
+  right: 10px;
+}
+
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.slider-dots .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(46, 125, 50, 0.3);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.slider-dots .dot.active {
+  background-color: var(--primary-green);
+  transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .testimonial-card {
+    padding: 30px 20px;
+  }
+  
+  .testimonial-text {
+    font-size: 1.1rem;
+  }
+  
+  .slider-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+}

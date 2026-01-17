@@ -1,0 +1,151 @@
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.about-text {
+  text-align: left;
+}
+
+.section-title {
+  text-align: left;
+}
+
+.about-description {
+  margin-bottom: 20px;
+  color: var(--light-text);
+  line-height: 1.8;
+}
+
+.mission {
+  background: var(--white);
+  padding: 25px;
+  border-radius: 15px;
+  margin-top: 30px;
+  border-left: 4px solid var(--blue-accent);
+}
+
+.mission h3 {
+  color: var(--primary-green);
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.mission p {
+  color: var(--light-text);
+  line-height: 1.6;
+}
+
+.about-image {
+  position: relative;
+}
+
+.image-stack {
+  position: relative;
+  width: 100%;
+  height: 500px;
+}
+
+.stack-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+}
+
+.stack-image.main {
+  z-index: 2;
+  top: 0;
+  left: 0;
+}
+
+.stack-image.secondary {
+  z-index: 1;
+  top: 30px;
+  left: 30px;
+  opacity: 0.8;
+  transform: rotate(-3deg);
+}
+
+.values h3 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--primary-green);
+  margin-bottom: 40px;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+}
+
+.value-card {
+  background: var(--white);
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  transition: var(--transition);
+  border: 2px solid transparent;
+}
+
+.value-card:hover {
+  border-color: var(--light-green);
+  transform: translateY(-5px);
+}
+
+.value-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: rgba(46, 125, 50, 0.1);
+  margin-bottom: 10px;
+  line-height: 1;
+}
+
+.value-card h4 {
+  color: var(--primary-green);
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.value-card p {
+  color: var(--light-text);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 992px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .section-title {
+    text-align: center;
+  }
+  
+  .about-text {
+    text-align: center;
+  }
+  
+  .image-stack {
+    height: 400px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .image-stack {
+    height: 300px;
+  }
+}
